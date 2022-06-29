@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CrudBooksComponent } from './crud-books/crud-books.component';
-import { Routes } from '@angular/router';
 
 @NgModule({
   declarations: [

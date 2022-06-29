@@ -13,7 +13,7 @@ export class CrudBooksComponent implements OnInit {
     this.selectData();  
   }
 
-  books= [];
+books= [];
 id;
 
 manageData(name,author,publish){
@@ -26,7 +26,7 @@ manageData(name,author,publish){
     bookDetails.bookname= name.value;
     bookDetails.authorname= author.value;
     bookDetails.publishdate= publish.value;
-    
+
 
     if(this.id==null){
        this.books.push(bookDetails);
@@ -47,13 +47,13 @@ selectData(){
     this.books=this.getData();
 }
 
- editData(index,name,author,publish){
+editData(index,name,author,publish){
     this.id = index;
-    console.log('inside edit');
     let arrObj =this.getData();
 	name.value = arrObj[index].bookname;
 	author.value = arrObj[index].authorname;
 	publish.value = arrObj[index].publishdate;
+    this.setData(arrObj);
 }
 
 deleteData(index){
