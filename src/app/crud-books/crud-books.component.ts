@@ -22,10 +22,6 @@ manageData(name,author,publish){
         authorname: "",
         publishdate: ""
     };
-	// console.log("enter in mg");
-	document.getElementById('msg').innerHTML="";
-    document.getElementById('validateAuthor').innerHTML=""; 
-    document.getElementById('validateDate').innerHTML="";
 
     bookDetails.bookname= name.value;
     bookDetails.authorname= author.value;
