@@ -134,8 +134,10 @@ img {
 
 .box1part4{
     display: flex;
-    justify-content: start;
-    align-items: start;  
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    float: left;
 }
 
 .box2{
@@ -157,9 +159,6 @@ img {
      table, td{
         font-size: 12px;
         padding:20px;
-    }
-
-    body{
-        overflow-x: scroll;
+        width:30%
     }
 }
