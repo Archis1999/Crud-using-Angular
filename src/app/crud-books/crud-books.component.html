@@ -1,32 +1,54 @@
+<div class="container1">
 
-<h2 id="text1">Enter the book details:</h2> 
-    <input type="text" #name id="name" placeholder="Book name" class="inputValues">  
-    <input type="text" #author id="author" placeholder="Author name" class="inputValues"> 
-    <input type="date" #publish id="publish" placeholder="Date" class="inputValues"> <br>
-    <input type="button" value="Submit" (click)='manageData(name,author,publish)' class="buttonSubmit">
+<div class="box1">
+    <div class="box1part1">
+        <h2 id="text1">Enter the book details:</h2>
+    </div>
+    <div class="box1part2">
+        <div class="box1part3">
+            <input type="text" #name id="name" placeholder="Book name" class="inputValues">  
+            <input type="text" #author id="author" placeholder="Author name" class="inputValues"> 
+            <input type="date" #publish id="publish" placeholder="Date" class="inputValues"> <br>
+        </div>
+        <div class="box1part4">
+            <input type="button" value="Submit" (click)='manageData(name,author,publish)' class="buttonSubmit">
+        </div>
+    </div>    
+</div> 
 
-<h2 id="text1">Book details:</h2>
-<table border="1">
-       
-        <tbody id="root">
-            <tr *ngFor="let book of books;let i = index">
-                <td>{{i+1}}</td>
-                <td>{{book.bookname}}</td>
-                <td>{{book.authorname}}</td>
-                <td>{{book.publishdate}}</td>
+<div class="box2">
+    <h2 id="text1">Book details:</h2>
+</div>
 
-                <td>
-                    <img src="assets/icons8-edit-30.png">    
-                    <a href="javascript:void(0)" id="editText" (click)="editData(i,name,author,publish)">Edit</a> 
-                </td>
+<div class="box3">
+    <table border="1">
+        
+            <tbody id="root">
+                <tr *ngFor="let book of books;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{book.bookname}}</td>
+                    <td>{{book.authorname}}</td>
+                    <td>{{book.publishdate}}</td>
 
-                <td>
-                    <img src="assets/icons8-delete-24.png">  
-                    <a href="javascript:void(0)" id="deleteText" (click)="deleteData(i)">Delete</a> 
-                </td>
-                
-            </tr>
-        </tbody> 
-    
-</table>
+                    <td>
+                        <img src="assets/icons8-edit-30.png">    
+                        <a href="javascript:void(0)" id="editText" (click)="editData(i,name,author,publish)">Edit</a> 
+                    </td>
+                    
+                    <td>
+                        <img src="assets/icons8-delete-24.png">  
+                        <a href="javascript:void(0)" id="deleteText" (click)="deleteData(i)">Delete</a> 
+                    </td>
+                </tr>
+            </tbody> 
+        
+    </table>
+</div>
 
+</div>
+<!-- 
+1. ui change
+2. ngForm 
+3. svg
+4. responsive
+ -->
