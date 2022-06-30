@@ -6,9 +6,11 @@
     </div>
     <div class="box1part2">
         <div class="box1part3">
-            <input type="text" #name id="name" placeholder="Book name" class="inputValues">  
-            <input type="text" #author id="author" placeholder="Author name" class="inputValues"> 
-            <input type="date" #publish id="publish" placeholder="Date" class="inputValues"> <br>
+            <form [formGroup]="myReactiveForm">
+                <input type="text" #name id="name" placeholder="Book name" class="inputValues" formControlName="name">  
+                <input type="text" #author id="author" placeholder="Author name" class="inputValues" formControlName="author"> 
+                <input type="date" #publish id="publish" placeholder="Date" class="inputValues" formControlName="publish"> <br>
+            </form>
         </div>
         <div class="box1part4">
             <input type="button" value="Submit" (click)='manageData(name,author,publish)' class="buttonSubmit">

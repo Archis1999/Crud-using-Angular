@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-crud-books',
@@ -6,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crud-books.component.css']
 })
 export class CrudBooksComponent implements OnInit {
-
+  myReactiveForm : FormGroup;  
   constructor() { }
 
   ngOnInit() {
     this.selectData();  
+
+    this.myReactiveForm = new FormGroup({
+        'name':new FormControl(null),
+        'author':new FormControl(null),
+        'publish':new FormControl(null),
+    })
   }
 
 books= [];
@@ -37,10 +44,12 @@ manageData(name,author,publish){
     }
     console.log(this.books);
     this.setData(this.books);
-
-    name.value=""; 
-    author.value="";
-    publish.value="";
+    
+    this.myReactiveForm = new FormGroup({
+        'name':new FormControl(null),
+        'author':new FormControl(null),
+        'publish':new FormControl(null),
+    })
 }
 
 selectData(){

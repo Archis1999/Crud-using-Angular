@@ -153,11 +153,10 @@ img {
     align-items: start;  
 }
 
-@media(max-width:100px){
-    table td, table tr{
-        display:block;
-        width: 52%;
-        margin:50px;
+@media(max-width:500px){
+     table, td{
+        font-size: 12px;
+        padding:20px;
     }
 
     body{
